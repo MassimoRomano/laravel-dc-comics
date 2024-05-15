@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('title', 100);
             $table->string('type', 20);
             $table->string('series', 50);
-            $table->string('sale_data', 15)->nullable();
-            $table->string('description',);
+            $table->string('sale_date');
+            $table->text('description',);
             $table->string('price',15);
             $table->timestamps();
         });
