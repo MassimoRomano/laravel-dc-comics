@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\csr;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -34,7 +34,7 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(csr $csr)
+    public function show(Comic $comic)
     {
         //
     }
@@ -42,7 +42,7 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(csr $csr)
+    public function edit(Comic $comic)
     {
         //
     }
@@ -50,7 +50,7 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, csr $csr)
+    public function update(Request $request, Comic $comic)
     {
         //
     }
@@ -58,7 +58,7 @@ class ComicController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(csr $csr)
+    public function destroy(Comic $comic)
     {
         //
     }
