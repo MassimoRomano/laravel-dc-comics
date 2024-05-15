@@ -7,7 +7,7 @@
         </div>
         <div class="table-responsive">
             <table class="table table-primary">
-                <thead>
+                <thead class="text-center">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Thumb</th>
@@ -19,27 +19,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ( $comics as $comic )
-                    <tr class="">
-                        <td scope="row">{{$comic->id}}</td>
-                        <td><img width="60" src="{{$comic->thumb}}" alt=""></td>
-                        <td>{{$comic->title}}</td>
-                        <td>{{$comic->type}}</td>
-                        <td>{{$comic->series}}</td>
-                        <td>{{$comic->price}}</td>
-                        <td>{{$comic->sale_date}}</td>
-                    </tr>
+                    @forelse ($comics as $comic)
+                        
+                        <tr class="text-center">
+                            <td scope="row">{{ $comic->id }}</td>
+                            <td><a class="text-decoration-none" href="{{route('comics.show', $comic)}}"><img width="60" src="{{ $comic->thumb }}" alt=""></a></td>
+                            <td><a class="text-decoration-none" href="{{route('comics.show', $comic)}}">{{ $comic->title }}</a></td>
+                            <td>{{ $comic->type }}</td>
+                            <td>{{ $comic->series }}</td>
+                            <td>{{ $comic->price }}</td>
+                            <td>{{ $comic->sale_date }}</td>
+                        </tr>
                     @empty
-                    <tr class="">
-                        <td scope="row" colspan="7">Nothing to show</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
+                        <tr class="">
+                            <td scope="row" colspan="7">Nothing to show</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                        </tr>
+                        
                     @endforelse
                 </tbody>
             </table>
         </div>
 
-       
+
     </div>
 @endsection
