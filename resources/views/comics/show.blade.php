@@ -1,22 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="{{$comic->thumb}}" alt="">
-            </div>
-            <div class="col">
-                <div class="card">
-                    <p>{{ $comic->id }}</p>
-                    <p>{{ $comic->title }}</p>
-                    <p>{{ $comic->description }}</p>
+    <div class="">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ $comic->thumb }}" alt="">
                 </div>
-                <!-- /.card -->
+                <div class="col align-content-center">
+                    <div class="card border-0 ">
+                        <p class="text-uppercase"><strong>{{ $comic->title }}</strong></p>
+                        <p>{{ $comic->description }}</p>
+                        <p><strong>{{$comic->price}}</strong></p>
+                    </div>
+                </div>
             </div>
-            <!-- /.col -->
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container -->
 @endsection

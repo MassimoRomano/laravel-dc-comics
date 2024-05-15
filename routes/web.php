@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::resource('/comics', ComicController::class);
 
+
