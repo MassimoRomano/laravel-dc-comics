@@ -37,6 +37,45 @@
                                         class="fas fa-eye fa-sm fa-fw"></i></a>
                                 <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}"> <i
                                         class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
+
+                                {{-- Modale --}}
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#modalId-{{ $comic->id }}">
+                                    <i class="fas fa-trash fa-sm fa-fw"></i>
+                                </button>
+
+                                <div class="modal fade" id="modalId-{{ $comic->id }}" tabindex="-1"
+                                    data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+                                    aria-labelledby="modalTitleId-{{ $comic->id }}" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                                        role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="modalTitleId-{{ $comic->id }}">
+                                                    Attenzione! {{ $comic->title }}
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Attenzione vuoi veramente cancellare questo file?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Chiudi
+                                                </button>
+                                                <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-success">
+                                                        Conferma
+                                                    </button>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
 
                         </tr>
