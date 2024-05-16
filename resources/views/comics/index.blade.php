@@ -70,14 +70,12 @@
                                                     <button type="submit" class="btn btn-success">
                                                         Conferma
                                                     </button>
-
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </td>
-
                         </tr>
                     @empty
                         <tr class="">
