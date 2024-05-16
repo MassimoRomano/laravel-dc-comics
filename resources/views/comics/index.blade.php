@@ -17,6 +17,7 @@
                         <th scope="col">Series</th>
                         <th scope="col">Price</th>
                         <th scope="col">Sale_date</th>
+                        <th scope="col">Modifica</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,13 @@
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->price }}</td>
                             <td>{{ $comic->sale_date }}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ route('comics.show', $comic) }}"><i
+                                        class="fas fa-eye fa-sm fa-fw"></i></a>
+                                <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}"> <i
+                                        class="fas fa-pencil-alt fa-sm fa-fw"></i></a>
+                            </td>
+
                         </tr>
                     @empty
                         <tr class="">
@@ -43,6 +51,6 @@
             </table>
         </div>
 
-        {{$comics->links('pagination::bootstrap-5')}}
+        {{ $comics->links('pagination::bootstrap-5') }}
     </div>
 @endsection
