@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2>Comics</h2>
+        <div class="d-flex justify-content-between align-items-center pb-4">
+            <h2 class="text-dark">Comics</h2>
             <a class="btn btn-primary" href="{{ route('comics.create') }}"> Add new comic </a>
         </div>
         <div class="table-responsive">
-            <table class="table table-primary">
+            <table class="table table-light">
                 <thead class="text-center">
                     <tr>
                         <th scope="col">ID</th>

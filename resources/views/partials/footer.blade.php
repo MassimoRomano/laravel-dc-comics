@@ -1,6 +1,6 @@
 <footer class="bg-dark">
     <div class="container">
-        <div class="row">
+        <div class="row py-4">
             <div class="col">
                 <ul class="">
                     <h4 class="text-primary">About</h4>
